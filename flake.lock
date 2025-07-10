@@ -1,0 +1,91 @@
+{
+  "nodes": {
+    "firefox-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1751909040,
+        "narHash": "sha256-pmnoJdyOKIDk8b4K4fG3jdX5dqjQ1x0+mx8bEhwytSs=",
+        "type": "tarball",
+        "url": "https://archive.mozilla.org/pub/firefox/releases/140.0.4/source/firefox-140.0.4.source.tar.xz"
+      },
+      "original": {
+        "type": "tarball",
+        "url": "https://archive.mozilla.org/pub/firefox/releases/140.0.4/source/firefox-140.0.4.source.tar.xz"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1752480373,
+        "narHash": "sha256-JHQbm+OcGp32wAsXTE/FLYGNpb+4GLi5oTvCxwSoBOA=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "62e0f05ede1da0d54515d4ea8ce9c733f12d9f08",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "firefox-src": "firefox-src",
+        "nixpkgs": "nixpkgs",
+        "systems": "systems",
+        "zen-browser-src": "zen-browser-src",
+        "zen-l10n": "zen-l10n"
+      }
+    },
+    "systems": {
+      "locked": {
+        "lastModified": 1689347949,
+        "narHash": "sha256-12tWmuL2zgBgZkdoB6qXZsgJEH9LR3oUgpaQq2RbI80=",
+        "owner": "nix-systems",
+        "repo": "default-linux",
+        "rev": "31732fcf5e8fea42e59c2488ad31a0e651500f68",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default-linux",
+        "type": "github"
+      }
+    },
+    "zen-browser-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1752678577,
+        "narHash": "sha256-zxIz1ghY/aMHA/0bN3unePFRge3XB2Oh9mVvv0ZAUUw=",
+        "owner": "zen-browser",
+        "repo": "desktop",
+        "rev": "eb843d94a566791175d492971d7d788d14e319fc",
+        "type": "github"
+      },
+      "original": {
+        "owner": "zen-browser",
+        "repo": "desktop",
+        "type": "github"
+      }
+    },
+    "zen-l10n": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1752407567,
+        "narHash": "sha256-6HG0ro8bXl+O8WFScO64LnpJph3wjINFca/ybV9taDc=",
+        "owner": "zen-browser",
+        "repo": "l10n-packs",
+        "rev": "e8450d0bd13a208e157a7fd7f99dc32582958605",
+        "type": "github"
+      },
+      "original": {
+        "owner": "zen-browser",
+        "repo": "l10n-packs",
+        "type": "github"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}

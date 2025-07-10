@@ -1,0 +1,57 @@
+{
+  description = "Zen Browser Nix Build";
+  inputs = {
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    systems.url = "github:nix-systems/default-linux";
+
+    zen-browser-src = {
+      url = "github:zen-browser/desktop";
+      flake = false;
+    };
+
+    zen-l10n = {
+      url = "github:zen-browser/l10n-packs";
+      flake = false;
+    };
+
+    firefox-src = {
+      url = "https://archive.mozilla.org/pub/firefox/releases/140.0.4/source/firefox-140.0.4.source.tar.xz";
+      flake = false;
+    };
+  };
+
+  outputs = inputs @ {
+    self,
+    nixpkgs,
+    systems,
+    ...
+  }: let
+    inherit (nixpkgs) lib;
+    eachSystem = lib.genAttrs (import systems);
+    pkgsFor = eachSystem (system:
+      import nixpkgs {
+        localSystem = system;
+        overlays = [self.overlays.zen-browser-packages];
+      });
+  in {
+    overlays = import ./overlays.nix {inherit self lib inputs;};
+
+    packages = eachSystem (system: {
+      default = self.packages.${system}.zen-browser;
+      zen-browser = pkgsFor.${system}.zen-browser;
+    });
+
+    devShells = eachSystem (system: {
+      default =
+        pkgsFor.${system}.mkShell.override {
+          inherit (self.packages.${system}.default) stdenv;
+        } {
+          name = "zen-browser-shell";
+          hardeningDisable = ["fortify"];
+          inputsFrom = [pkgsFor.${system}.zen-browser];
+          packages = [pkgsFor.${system}.clang-tools];
+          inherit (self.checks.${system}.pre-commit-check) shellHook;
+        };
+    });
+  };
+}
