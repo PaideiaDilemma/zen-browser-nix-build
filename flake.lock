@@ -3,14 +3,14 @@
     "firefox-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1751909040,
-        "narHash": "sha256-pmnoJdyOKIDk8b4K4fG3jdX5dqjQ1x0+mx8bEhwytSs=",
+        "lastModified": 1752525259,
+        "narHash": "sha256-e23540RjTx23vgTl4vSwSeo0mENrnM6ISohiz82lSs4=",
         "type": "tarball",
-        "url": "https://archive.mozilla.org/pub/firefox/releases/140.0.4/source/firefox-140.0.4.source.tar.xz"
+        "url": "https://archive.mozilla.org/pub/firefox/candidates/141.0-candidates/build1/source/firefox-141.0.source.tar.xz"
       },
       "original": {
         "type": "tarball",
-        "url": "https://archive.mozilla.org/pub/firefox/releases/140.0.4/source/firefox-140.0.4.source.tar.xz"
+        "url": "https://archive.mozilla.org/pub/firefox/candidates/141.0-candidates/build1/source/firefox-141.0.source.tar.xz"
       }
     },
     "nixpkgs": {

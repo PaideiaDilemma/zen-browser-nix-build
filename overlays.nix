@@ -8,7 +8,7 @@
     (builtins.substring 4 2 longDate)
     (builtins.substring 6 2 longDate)
   ]);
-  ver = "1.14.3b"; #TODO?
+  ver = "latest";
 in {
   default = lib.composeManyExtensions (with self.overlays; [
     zen-browser-packages

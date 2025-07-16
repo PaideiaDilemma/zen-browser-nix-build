@@ -1,0 +1,17 @@
+diff --git a/tools/ffprefs/src/main.rs b/tools/ffprefs/src/main.rs
+index aa93122..31aeb5b 100644
+--- a/tools/ffprefs/src/main.rs
++++ b/tools/ffprefs/src/main.rs
+@@ -106,9 +106,9 @@ use std::env;
+ use std::fs;
+ use std::path::PathBuf;
+ 
+-const STATIC_PREFS: &str = "../engine/modules/libpref/init/zen-static-prefs.inc";
+-const FIREFOX_PREFS: &str = "../engine/browser/app/profile/firefox.js";
+-const DYNAMIC_PREFS: &str = "../engine/browser/app/profile/zen-browser.js";
++const STATIC_PREFS: &str = "./modules/libpref/init/zen-static-prefs.inc";
++const FIREFOX_PREFS: &str = "./browser/app/profile/firefox.js";
++const DYNAMIC_PREFS: &str = "./browser/app/profile/zen-browser.js";
+ 
+ #[derive(Serialize, Deserialize, PartialEq, Debug)]
+ struct Preference {

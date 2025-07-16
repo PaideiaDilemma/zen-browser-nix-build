@@ -288,6 +288,20 @@
       terminal = false;
     }
   );
+
+  ffprefs = rustPlatform.buildRustPackage {
+    name = "ffprefs";
+    version = "latest";
+
+    postPatch = ''
+          substituteInPlace src/main.rs \
+              --replace "../engine/" "../"
+    '';
+
+    src = "${zen-src}/tools/ffprefs";
+    useFetchCargoVendor = true;
+    cargoHash = "sha256-DZMwxeulQiIiSATU0MoyqiUMA0USZq6umhkr67hZH1Q=";
+  };
 in
   buildEnv.mkDerivation {
     pname = "zen-browser";
@@ -378,6 +392,7 @@ in
 
       # Merge zen-browser/desktop/src into the firefox source
       rsync -r --exclude "*.patch" ${zen-src}/src/ .
+      rsync -r ${zen-src}/prefs/ ./prefs
 
       # Apply all patches
       find ${zen-src}/src/ -name "*.patch" -exec sh -c 'git apply "$0"' {} \;
@@ -389,6 +404,11 @@ in
 
       # Copy transitions for the zen ui (this is about what update_en_US_packs does)
       rsync -r ${zen-l10n}/en-US/browser/ ./browser/locales/en-US/
+
+      # Zen preferences
+      chmod +w /build/source/modules/libpref/init/zen-static-prefs.inc
+      ls -alh /build/source/prefs/../modules/libpref/init/zen-static-prefs.inc
+      ${ffprefs}/bin/ffprefs .
     '';
 
     preConfigure = ''

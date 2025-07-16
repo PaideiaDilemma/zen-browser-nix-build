@@ -15,7 +15,9 @@
     };
 
     firefox-src = {
-      url = "https://archive.mozilla.org/pub/firefox/releases/140.0.4/source/firefox-140.0.4.source.tar.xz";
+      # For stable
+      # url = "https://archive.mozilla.org/pub/firefox/releases/140.0.4/source/firefox-140.0.4.source.tar.xz";
+      url = "https://archive.mozilla.org/pub/firefox/candidates/141.0-candidates/build1/source/firefox-141.0.source.tar.xz";
       flake = false;
     };
   };
