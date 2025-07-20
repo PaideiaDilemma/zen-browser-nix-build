@@ -27,7 +27,7 @@ in {
         zen-version = ver;
         branch = "main";
         llvmBuildPackages = final.llvmPackages_20;
-        ltoSupport = false;
+        ltoSupport = true;
         inherit version;
       }) {};
     })

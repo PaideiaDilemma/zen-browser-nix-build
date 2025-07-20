@@ -352,7 +352,6 @@ in
       libvpx
       libwebp
       libxkbcommon
-      llvmBuildPackages.libcxx
       nspr
       nss_latest
       pango
@@ -360,6 +359,7 @@ in
       zlib
     ];
 
+    # Doesn't work?
     appendRunpaths = [
       "${pipewire}/lib"
       "${udev}/lib"

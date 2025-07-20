@@ -3,23 +3,23 @@
     "firefox-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1752525259,
-        "narHash": "sha256-e23540RjTx23vgTl4vSwSeo0mENrnM6ISohiz82lSs4=",
+        "lastModified": 1752780957,
+        "narHash": "sha256-UVHHHhoYoPspZAOjpGhgI9RVxSPlRS8JTlUCxh3YM1E=",
         "type": "tarball",
-        "url": "https://archive.mozilla.org/pub/firefox/candidates/141.0-candidates/build1/source/firefox-141.0.source.tar.xz"
+        "url": "https://archive.mozilla.org/pub/firefox/releases/141.0/source/firefox-141.0.source.tar.xz"
       },
       "original": {
         "type": "tarball",
-        "url": "https://archive.mozilla.org/pub/firefox/candidates/141.0-candidates/build1/source/firefox-141.0.source.tar.xz"
+        "url": "https://archive.mozilla.org/pub/firefox/releases/141.0/source/firefox-141.0.source.tar.xz"
       }
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1752480373,
-        "narHash": "sha256-JHQbm+OcGp32wAsXTE/FLYGNpb+4GLi5oTvCxwSoBOA=",
+        "lastModified": 1752950548,
+        "narHash": "sha256-NS6BLD0lxOrnCiEOcvQCDVPXafX1/ek1dfJHX1nUIzc=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "62e0f05ede1da0d54515d4ea8ce9c733f12d9f08",
+        "rev": "c87b95e25065c028d31a94f06a62927d18763fdf",
         "type": "github"
       },
       "original": {
@@ -56,11 +56,11 @@
     "zen-browser-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1752678577,
-        "narHash": "sha256-zxIz1ghY/aMHA/0bN3unePFRge3XB2Oh9mVvv0ZAUUw=",
+        "lastModified": 1753227192,
+        "narHash": "sha256-fmc76Ff1zH52lOsIqpg9NGGk7t0Rc0+3W4fQMpQkEcA=",
         "owner": "zen-browser",
         "repo": "desktop",
-        "rev": "eb843d94a566791175d492971d7d788d14e319fc",
+        "rev": "ca289363c35e4b1252e577aebb33b42c671acd7c",
         "type": "github"
       },
       "original": {
@@ -72,11 +72,11 @@
     "zen-l10n": {
       "flake": false,
       "locked": {
-        "lastModified": 1752407567,
-        "narHash": "sha256-6HG0ro8bXl+O8WFScO64LnpJph3wjINFca/ybV9taDc=",
+        "lastModified": 1753224960,
+        "narHash": "sha256-+SWqHutxpaRzja3tfinzicVjrxL+nZdeEIc7oXA8DV8=",
         "owner": "zen-browser",
         "repo": "l10n-packs",
-        "rev": "e8450d0bd13a208e157a7fd7f99dc32582958605",
+        "rev": "fcd32a777ed07535440900c97b77897fcd35f88d",
         "type": "github"
       },
       "original": {
