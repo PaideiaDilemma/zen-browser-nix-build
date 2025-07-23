@@ -8,6 +8,7 @@
     (builtins.substring 4 2 longDate)
     (builtins.substring 6 2 longDate)
   ]);
+  branch = "dev";
   ver = "latest";
 in {
   default = lib.composeManyExtensions (with self.overlays; [
@@ -17,19 +18,24 @@ in {
   zen-browser-packages = lib.composeManyExtensions [
     (final: _prev: let
       date = mkDate (self.lastModifiedDate or "19700101");
-      version = "${ver}+date=${date}_${self.shortRev or "dirty"}";
+      version = "${ver}-${branch}+date=${date}_${self.shortRev or "dirty"}";
     in {
-      zen-browser = final.callPackage (import ./default.nix {
+      zen-browser-unwrapped = final.callPackage (import ./unwrapped.nix {
         name = "zen-browser";
         firefox-src = inputs.firefox-src;
         zen-src = inputs.zen-browser-src;
         zen-l10n = inputs.zen-l10n;
         zen-version = ver;
-        branch = "main";
         llvmBuildPackages = final.llvmPackages_20;
-        ltoSupport = true;
+        ltoSupport = false;
         inherit version;
       }) {};
+
+      #zen-browser = final.zen-browser-unwrapped;
+      zen-browser = (import ./default.nix {
+        wrapFirefox = _prev.buildPackages.wrapFirefox;
+        zen-browser-unwrapped = final.zen-browser-unwrapped;
+      });
     })
   ];
 }

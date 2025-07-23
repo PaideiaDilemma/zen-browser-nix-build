@@ -41,6 +41,7 @@
     packages = eachSystem (system: {
       default = self.packages.${system}.zen-browser;
       zen-browser = pkgsFor.${system}.zen-browser;
+      zen-browser-unwrapped = pkgsFor.${system}.zen-browser-unwrapped;
     });
 
     devShells = eachSystem (system: {
@@ -50,9 +51,8 @@
         } {
           name = "zen-browser-shell";
           hardeningDisable = ["fortify"];
-          inputsFrom = [pkgsFor.${system}.zen-browser];
+          inputsFrom = [pkgsFor.${system}.zen-browser-unwrapped];
           packages = [pkgsFor.${system}.clang-tools];
-          inherit (self.checks.${system}.pre-commit-check) shellHook;
         };
     });
   };
