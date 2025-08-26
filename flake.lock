@@ -3,23 +3,23 @@
     "firefox-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1752780957,
-        "narHash": "sha256-UVHHHhoYoPspZAOjpGhgI9RVxSPlRS8JTlUCxh3YM1E=",
+        "lastModified": 1754935828,
+        "narHash": "sha256-Iz+x+AFFtgeaG7Oy8GHzjuaGLmjNjLtFlFO606kjSqY=",
         "type": "tarball",
-        "url": "https://archive.mozilla.org/pub/firefox/releases/141.0/source/firefox-141.0.source.tar.xz"
+        "url": "https://archive.mozilla.org/pub/firefox/releases/142.0/source/firefox-142.0.source.tar.xz"
       },
       "original": {
         "type": "tarball",
-        "url": "https://archive.mozilla.org/pub/firefox/releases/141.0/source/firefox-141.0.source.tar.xz"
+        "url": "https://archive.mozilla.org/pub/firefox/releases/142.0/source/firefox-142.0.source.tar.xz"
       }
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1753939845,
-        "narHash": "sha256-K2ViRJfdVGE8tpJejs8Qpvvejks1+A4GQej/lBk5y7I=",
+        "lastModified": 1756125398,
+        "narHash": "sha256-XexyKZpf46cMiO5Vbj+dWSAXOnr285GHsMch8FBoHbc=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "94def634a20494ee057c76998843c015909d6311",
+        "rev": "3b9f00d7a7bf68acd4c4abb9d43695afb04e03a5",
         "type": "github"
       },
       "original": {
@@ -56,11 +56,11 @@
     "zen-browser-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1754017047,
-        "narHash": "sha256-Dh7Bq5FkkuG9m3ZJp0wp9Ekt6LF9OrMmSkcRwy1igQ8=",
+        "lastModified": 1756218724,
+        "narHash": "sha256-cC3lpo//T+pD0NG7hh9r8S6/ccqrD387Icb1Ulb2DqI=",
         "owner": "zen-browser",
         "repo": "desktop",
-        "rev": "1dce853e2ab63d5b5f6657412d1609c81fb9b02c",
+        "rev": "0979c5dbbc5e3a16189ed625777c5a17b0deb35b",
         "type": "github"
       },
       "original": {
