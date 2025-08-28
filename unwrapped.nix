@@ -521,6 +521,7 @@ in
       # Install distribution customizations
       install -Dvm644 ${dirstibutionIni} "$resourceDir/distribution/distribution.ini"
       install -Dvm644 ${defaultPrefs} "$resourceDir/browser/defaults/preferences/unoffical-nixos-zen-default-prefs.js"
+      install -Dvm644 ${zen-src}/docs/assets/zen-dark.svg "$out/share/icons/hicolor/scalable/apps/${wmClass}.svg"
       # Install desktop file
       install -m 644 -D -t $out/share/applications ${desktopItem}/share/applications/*
     '';
